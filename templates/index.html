@@ -1,0 +1,107 @@
+<html>
+	<head>
+	<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+		<title>Stress Predictor</title>
+	</head>
+	<body style="background-color:cornflowerblue;">
+	<!-- Java Script -->	
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+		
+		<!-- Navbar-->
+		<nav class="navbar navbar-light bg-secondary">
+			<span class="navbar-brand mb-0 h1">Stress Predictor</span>
+		</nav>
+		<div class="container">
+			<br>
+			<!--Form-->
+			<form action = "{{url_for('predict')}}" method ="POST" >
+				<fieldset>
+				<legend>Questionaire</legend><br>
+				  <div class="card card-body" >
+					  <div class="form-group  row">
+						<div class="col-sm-3">
+							<label for="Qa">Do you suffer from headaches ?</label>
+							<input type="number" class="form-control" id="Qa" name="Qa" required>
+						</div>
+						<div class="col-sm-5">
+							<label for="Qb">Do you perceive study as a burden? </label>
+							<input type="number" class="form-control" id="Qb" name="Qb" required>
+						</div> 
+                        <div class="col-sm-4">
+							<label for="Qi">Do you often feel guilty?  </label>
+							<input type="number" class="form-control" id="Qi" name="Qi" required>
+						</div>
+                        <div class="col-sm-5">
+							<label for="Qc">Do you most oftenly feel mentally and physically tired?</label>
+							<input type="number" class="form-control" id="Qc" name="Qc" required>
+						</div>
+                        <div class="col-sm-3">
+							<label for="Qd">Do you feel irritated?</label>
+							<input type="number" class="form-control" id="Qd" name="Qd" required>
+						</div>
+                        <div class="col-sm-4">
+							<label for="Qe">Do you easily get angry?</label>
+							<input type="number" class="form-control" id="Qe" name="Qe" required>
+						</div>
+                        <div class="col-sm-3">
+							<label for="Qf">Do you think your life is boring?</label>
+							<input type="number" class="form-control" id="Qf" name="Qf" required>
+						</div>
+                        <div class="col-sm-4">
+							<label for="Qg">Do you easily get disheartened by failures?</label>
+							<input type="number" class="form-control" id="Qg" name="Qg" required>
+						</div>
+                        <div class="col-sm-5">
+							<label for="Qj">Are you a responsible child?</label>
+							<input type="number" class="form-control" id="Qj" name="Qj" required>
+						</div>
+                        <div class="col-sm-8">
+							<label for="Qh">Are you constantly working towards maintaining your importance among your friends ?</label>
+							<input type="number" class="form-control" id="Qh" name="Qh" required>
+						</div>
+                        <div class="col-sm-4">
+							<label for="Qk">Do you smoke or take alcohol?</label>
+							<input type="number" class="form-control" id="Qk" name="Qk" required>
+						</div>
+                        <div class="col-sm-5">
+							<label for="Ql"> Do you find it difficult to take quick decision?</label>
+							<input type="number" class="form-control" id="Ql" name="Ql" required>
+						</div>
+                        <div class="col-sm-7">
+							<label for="Qm">  Do your friends often pressurize you to behave in a same manner as they do? </label>
+							<input type="number" class="form-control" id="Qm" name="Qm" required>
+						</div>
+                        <div class="col-sm-8">
+							<label for="Qn">Do you find the same work that once interested you boring now?</label>
+							<input type="number" class="form-control" id="Qn" name="Qn" required>
+						</div>
+                        <div class="col-sm-4">
+							<label for="Qo">Do you mostly feel restless?</label>
+							<input type="number" class="form-control" id="Qo" name="Qo" required>
+						</div>  
+
+					  </div>
+					  <br>
+					  <div class="form-group">
+						<input class="btn btn-primary" type="submit" value="Result">
+					  </div>
+					  
+					  <!--Prediction Result-->
+					  <div id ="result">
+							<strong style="color:blue">{{result}}</strong>
+					 </div>
+				     </div>
+			 </fieldset>
+			</form>
+			
+		</div>
+		
+	</body>
+</html>
